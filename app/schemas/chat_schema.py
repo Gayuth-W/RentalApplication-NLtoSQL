@@ -9,4 +9,8 @@ class ChatResponse(BaseModel):
   # answer: str
   sql: str
   # tables_used: List[Any]
+<<<<<<< HEAD
   rows: List[Any]
+=======
+  # rows: List[Any]
+>>>>>>> d96dea5 (fix: remove api key)
