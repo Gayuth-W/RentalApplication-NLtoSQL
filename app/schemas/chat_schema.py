@@ -8,4 +8,5 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
   answer: str
   sql: str
+  tables_used: List[Any]
   rows: List[Any]
