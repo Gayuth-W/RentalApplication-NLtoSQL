@@ -2,6 +2,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 import os
 from dotenv import load_dotenv
+from langchain_community.chat_models import ChatOllama
 
 load_dotenv()
 
@@ -23,10 +24,16 @@ Return a comma-separated list of tables required to answer the question. Only th
 """
 )
 
-llm = ChatOpenAI(
-  model="gpt-4o-mini",
-  api_key=os.getenv("OPENAI_API_KEY")
-  )
+# llm = ChatOpenAI(
+#   model="gpt-4o-mini",
+#   api_key=os.getenv("OPENAI_API_KEY")
+#   )
+
+llm = ChatOllama(
+    model="gemma3:1b",   # or gemma3:1b if pulled
+    base_url="http://localhost:11434",
+    temperature=0
+)
 
 def select_tables(question: str, available_tables: dict, examples: list) -> list[str]:
   prompt = TABLE_SELECTION_PROMPT.format(
