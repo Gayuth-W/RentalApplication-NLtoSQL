@@ -7,11 +7,11 @@ from app.chains.table_selector import select_tables, generate_sql
 from app.examples.few_shot_examples import FEW_SHOT_EXAMPLES as examples
 
 def run_nl2sql(question: str, session_id: str | None = None):
-    # 1. Select tables
-    # 2. Generate SQL
+    # 1. Select tables-done
+    # 2. Generate SQL-done
     # 3. Clean SQL
-    # 4. Execute SQL
-    # 5. Generate natural language answer
+    # 4. Execute SQL-done
+    # 5. Generate natural language answer-done
   
   TABLES = {
       "listing": "Listing table with columns: listing_id, title, location, price, bedrooms, bathrooms, seller_id",
@@ -27,7 +27,7 @@ def run_nl2sql(question: str, session_id: str | None = None):
       result = conn.execute(text(sql))
       rows = [dict(row._mapping) for row in result]
 
-  answer = f"Found {len(rows)} results."
+  answer = f"I found {len(rows)} results that match your descrption."
   return {
       "sql": sql,
       "rows": rows,
