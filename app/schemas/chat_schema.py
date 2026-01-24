@@ -6,7 +6,7 @@ class ChatRequest(BaseModel):
   session_id: str | None=None
   
 class ChatResponse(BaseModel):
-  # answer: str
+  answer: str
   sql: str
   # tables_used: List[Any]
   rows: List[Any]
