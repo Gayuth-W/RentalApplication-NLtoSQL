@@ -38,6 +38,10 @@ The **RentalApp NL2SQL Engine** bridges the gap between non-technical users and 
 - **LLM Engine**: [Ollama](https://ollama.com/) (Model: `gemma3:1b`)
 - **Language**: Python 3.10+
 
+- [frontend](https://github.com/Gayuth-W/RentalApplication-frontend)
+- [Backend](https://github.com/Gayuth-W/RentalApplication-backend)
+- [chatbot](https://github.com/Gayuth-W/RentalApplication-NLtoSQL)
+
 ---
 
 ## Setup Instructions
